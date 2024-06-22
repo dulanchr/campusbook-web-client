@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logomainfull from "../Assets/img/Logo/LogoMainFull.png";
+import logomainfull from "../Assets/img/Logo/logo.svg";
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
