@@ -6,9 +6,21 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      'accent-primary': '#4A6DE5',
+      'accent-disable': '#E2F6FF',
+      'alternate-primary': '#23B8FC',
+      'text-primary': '#1F1F1F',
+      'text-secondary': '#637381',
+      'text-tertiary': '#9C9C9C',
+      'error-primary': '#FC5723',
+      'zero': '#FFFFFF',
+      'stroke': '#DFE4EA',
+      'hover': '#F4F4F4',
+    },
     extend: {
       fontFamily: {
-        'bee': ['Be Vietnam Pro', 'sans-serif'],
+        'bee': ['Lexend', 'sans-serif'],
       },
       backgroundImage: {
         'hero-pattern': "url('/src/Assets/img/Backgrounds/hero-pattern.svg')",
@@ -27,17 +39,6 @@ module.exports = {
         'bold': 700,
         'extrabold': 800,
       },
-
-      colors: {
-        primary: {
-          DEFAULT: '#DFE4EA', // Use the provided gray as the default
-          'light': '#FFFFFF', // White
-          'dark': '#637381',  // Dark gray
-          'text': '#000000',  // Black for text on gray backgrounds
-        },
-        secondary: '#ff6347', // Replace red-500 with your custom color
-      },
-
       width: {
         '1/7': '14.2857143%',
         '2/7': '28.5714286%',
