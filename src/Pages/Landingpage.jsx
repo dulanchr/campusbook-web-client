@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import DropdownP from "../Components/Inputs/DropdownP";
 import ButtonP2 from "../Components/Buttons/ButtonP2";
 import logo from "../Assets/img/Logo/LogoFull.svg";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
-  // ---------Dropdown Content---------
+  const navigate = useNavigate();
+
   const options = [
     { id: 1, label: "Physical Science" },
     { id: 2, label: "Biological Science" },
@@ -19,9 +21,6 @@ const LandingPage = () => {
     setSelectedOption1(option);
     console.log("Selected option 1:", option);
   };
-  // ----------------------------------
-
-  // ---------Button Icon---------
 
   const buttonIcon = (
     <svg
@@ -34,7 +33,10 @@ const LandingPage = () => {
       <path d="M646-440H200q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520h446L532-634q-12-12-11.5-28t11.5-28q12-12 28.5-12.5T589-691l183 183q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L589-269q-12 12-28.5 11.5T532-270q-11-12-11.5-28t11.5-28l114-114Z" />
     </svg>
   );
-  // ---------Button Icon---------
+
+  const handleButtonClick = () => {
+    navigate("/step01", { state: { selectedStream: selectedOption1 } });
+  };
 
   return (
     <div className="bg-hero-pattern h-screen flex flex-col font-bee">
@@ -53,7 +55,7 @@ const LandingPage = () => {
             <ButtonP2
               text="Explore Book"
               icon={buttonIcon}
-              onClick={() => console.log("Button clicked!")}
+              onClick={handleButtonClick}
               className="w-full"
             />
           </div>
